@@ -1,0 +1,1 @@
+O(nlogn) as my code first sorts the array (assuming optimzal sorting performance), then performs work in constant sized loops, which thereby take constant time.
