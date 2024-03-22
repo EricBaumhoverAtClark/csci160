@@ -1,0 +1,36 @@
+
+def partition(array, p):
+    array_l = []
+    array_r = []
+    
+    for i in range(len(array)):
+        if i != p:
+            if array[i] < array[p]:
+                array_l.append(array[i])
+            else:
+                array_r.append(array[i])
+
+    return array_l + [array[p]] + array_r, len(array_l) + 1
+
+def quicksort(array):
+    
+    if len(array) > 1:
+        new_array, p = partition(array, len(array) // 2)
+    
+        print("???")
+        print(array)
+        print(new_array)
+    
+        array_l = quicksort(new_array[0:p])
+        array_r = quicksort(new_array[p+1:len(new_array)])
+        
+        print(array_l)
+        print(array_r)
+        
+        return array_l + [new_array[p]] + array_r
+        
+    return array
+        
+        
+result = quicksort([5,3,4,1,2])
+print(result)
