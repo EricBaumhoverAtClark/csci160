@@ -7,6 +7,5 @@ public static BigInteger fibonacciModified(BigInteger t1, BigInteger t2, int n) 
    
    if (n == 3) return value;
    
-   System.out.println(value);
    return fibonacciModified(t2, value, n - 1);
 }
