@@ -75,3 +75,6 @@ public static List<Integer> shortestPath(List<List<Integer>> a, List<List<Intege
         }
         return results;
     }
+	
+	// A* implementation that combines x y and score into a single number.
+	// Time: O(nmq) where n is the number of rows, m is the number of columns and q is the number of queries. Does not explore the same cell twice. 
